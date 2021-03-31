@@ -1,1 +1,1 @@
-# easy-reports
+# Easy Reports
