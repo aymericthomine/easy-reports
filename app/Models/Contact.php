@@ -14,9 +14,10 @@ class Contact extends Model
     public static function validationRules($id = null)
     {
         return [
-            'name'      => 'required',
-            'firstname'      => 'required',
+            'name'        => 'required',
+            'firstname'   => 'required',
             'gender'      => 'required',
+            'class'       => 'required',
         ];
     }
 

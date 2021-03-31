@@ -2,7 +2,7 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             <a href="/">
-                <img class="mx-auto" width="200" src="/images/Logo-avec-arrows.png"/>
+                <img class="mx-auto" width="300" src="/images/easy-reports.png"/>
             </a>
             <div class="sm:mx-auto sm:w-full sm:max-w-md">
                 <h2 class="mt-10 text-3xl font-bold text-center">

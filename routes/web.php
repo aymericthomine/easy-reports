@@ -104,13 +104,13 @@ Route::group(['middleware' => 'auth']   , function () {
 //    Route::get('/',                     function () { return view('dashboard');                })->name('dashboard');
     Route::get('/profile'           , function () { return view('profile/show'); });
 
-    Route::get( '/users'                          ,[UsersTable::class,    'index'                ])->name('users.index'        );
-    Route::post('/users'                          ,[UsersTable::class,    'store'                ])->name('users.store'        );
-    Route::get( '/users/create'                   ,[UsersTable::class,    'create'               ])->name('users.create'       );
-    Route::get( '/users/{user}'                   ,[UsersTable::class,    'show'                 ])->name('users.show'         );
-    Route::get( '/users/{user}/edit'              ,[UsersTable::class,    'edit'                 ])->name('users.edit'         );
-    Route::put( '/users/{user}'                   ,[UsersTable::class,    'update'               ])->name('users.update'       );
-    Route::get( '/users/{user}/destroy'           ,[UsersTable::class,    'destroy'              ])->name('users.destroy'      );
+    Route::get( '/teachers'                          ,[UsersTable::class,    'index'                ])->name('users.index'        );
+    Route::post('/teachers'                          ,[UsersTable::class,    'store'                ])->name('users.store'        );
+    Route::get( '/teachers/create'                   ,[UsersTable::class,    'create'               ])->name('users.create'       );
+    Route::get( '/teachers/{user}'                   ,[UsersTable::class,    'show'                 ])->name('users.show'         );
+    Route::get( '/teachers/{user}/edit'              ,[UsersTable::class,    'edit'                 ])->name('users.edit'         );
+    Route::put( '/teachers/{user}'                   ,[UsersTable::class,    'update'               ])->name('users.update'       );
+    Route::get( '/teachers/{user}/destroy'           ,[UsersTable::class,    'destroy'              ])->name('users.destroy'      );
 
     Route::get( '/products'                       ,[ProductsTable::class, 'index'                ])->name('products.index'     );
     Route::post('/products'                       ,[ProductsTable::class, 'store'                ])->name('products.store'     );
@@ -138,14 +138,14 @@ Route::group(['middleware' => 'auth']   , function () {
     Route::get( '/prospects/{prospect}/destroy'   ,[ProspectsTable::class, 'destroy'             ])->name('prospects.destroy'  );
     Route::post('/prospects/dragAndDrop'          ,[ProspectsTable::class, 'dragAndDrop'         ])->name('prospects.drop'     );
 
-    Route::get( '/contacts'                       ,[ContactsTable::class, 'index'                ])->name('contacts.index'     );
-    Route::post('/contacts'                       ,[ContactsTable::class, 'store'                ])->name('contacts.store'     );
-    Route::get( '/contacts/create'                ,[ContactsTable::class, 'create'               ])->name('contacts.create'    );
-    Route::get( '/contacts/{contact}'             ,[ContactsTable::class, 'show'                 ])->name('contacts.show'      );
-    Route::get( '/contacts/{contact}/edit'        ,[ContactsTable::class, 'edit'                 ])->name('contacts.edit'      );
-    Route::put( '/contacts/{contact}'             ,[ContactsTable::class, 'update'               ])->name('contacts.update'    );
-    Route::get( '/contacts/{contact}/destroy'     ,[ContactsTable::class, 'destroy'              ])->name('contacts.destroy'   );
-    Route::post('/contacts/dragAndDrop'           ,[ContactsTable::class, 'dragAndDrop'          ])->name('contacts.drop'      );
+    Route::get( '/students'                       ,[ContactsTable::class, 'index'                ])->name('contacts.index'     );
+    Route::post('/students'                       ,[ContactsTable::class, 'store'                ])->name('contacts.store'     );
+    Route::get( '/students/create'                ,[ContactsTable::class, 'create'               ])->name('contacts.create'    );
+    Route::get( '/students/{contact}'             ,[ContactsTable::class, 'show'                 ])->name('contacts.show'      );
+    Route::get( '/students/{contact}/edit'        ,[ContactsTable::class, 'edit'                 ])->name('contacts.edit'      );
+    Route::put( '/students/{contact}'             ,[ContactsTable::class, 'update'               ])->name('contacts.update'    );
+    Route::get( '/students/{contact}/destroy'     ,[ContactsTable::class, 'destroy'              ])->name('contacts.destroy'   );
+    Route::post('/students/dragAndDrop'           ,[ContactsTable::class, 'dragAndDrop'          ])->name('contacts.drop'      );
 
     Route::get( '/companies'                      ,[CompaniesTable::class, 'index'               ])->name('companies.index'    );
     Route::post('/companies'                      ,[CompaniesTable::class, 'store'               ])->name('companies.store'    );

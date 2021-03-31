@@ -10,7 +10,7 @@
     @if( ! empty($selected) )
         <x-jet-button class="mt-4 ml-4 btn" wire:click="toContact()" wire:loading.attr="disabled">
             <img class="mr-3" width="20" src="/images/add-user.png"/>
-            {{__('TRANSFER TO CONTACT')}}
+            {{__('TRANSFER TO STUDENT')}}
         </x-jet-button>
 
         <x-jet-button class="mt-4 ml-4 btn" style="background-color: #03cc00; color: white" wire:click="openModal('updateAll')" wire:loading.attr="disabled">
@@ -23,14 +23,14 @@
 <style>
     .btn {
         img: url("/images/add-user.png");
-        background-color: #ffecdc;
+        background-color: #75C7FB;
         border: none;
-        color: #222222;
+        color: #FFFFFF;
     }
 
     .btn:hover {
-        background-color: #fd5f12;
-        color: white;
+        background-color: #FF3847;
+        color: #222222;
     }
 
     #image:hover {

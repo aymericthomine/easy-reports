@@ -58,17 +58,6 @@ class ProspectsTable extends LivewireDatatable
             Column::name('B')->filterable()->searchable()->editable()->defaultSort('asc'),
             Column::name('C')->filterable()->searchable()->editable()->defaultSort('asc'),
             Column::name('D')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('E')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('F')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('G')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('H')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('I')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('J')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('K')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('L')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('M')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('N')->filterable()->searchable()->editable()->defaultSort('asc'),
-            Column::name('O')->filterable()->searchable()->editable()->defaultSort('asc'),
         ];
     }
 
@@ -102,22 +91,20 @@ class ProspectsTable extends LivewireDatatable
             try {
                 $total++;
 
-                $this->company_id = Company::updateOrcreate([
-                    'name'          => $this->prospect->F,
-                ])->id;
-
                 $this->contact = Contact::create([
                     'name'          => Str::upper($this->prospect->A),
                     'firstname'     => Str::title($this->prospect->B),
                     'gender'        => $this->prospect->C,
+                    'class'        => $this->prospect->D,
                 ]);
+
             } catch (\Throwable $e) {
-                $this->emailList .= 'Name => ' . $this->prospect->A . ', Firstname => ' . $this->prospect->B . ', Gender => ' . $this->prospect->C;
+                $this->emailList .= 'Name => ' . $this->prospect->A . ', Firstname => ' . $this->prospect->B . ', Gender => ' . $this->prospect->C . ', Class => ' . $this->prospect->D;
                 $err++;
             }
         }
 
-        $this->report = __("Empty/duplicate emails :err on :total", ['err'=>$err, 'total'=>$total]);
+        $this->report = __("Empty/duplicate students :err on :total", ['err'=>$err, 'total'=>$total]);
 
         $this->openModal('readonly');
     }

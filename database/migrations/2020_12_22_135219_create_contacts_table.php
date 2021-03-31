@@ -24,8 +24,8 @@ class CreateContactsTable extends Migration
             $table->tinyInteger('proximity')->nullable()->default(1);
             $table->string('gender', 5)->nullable();
             $table->string('firstname', 30)->nullable();
-            $table->string('name', 30);
-            $table->string('email', 50)->unique();
+            $table->string('name', 30)->unique();
+            $table->string('email', 50)->nullable();
             $table->string('email_status', 10);
             $table->string('operation', 30);
             $table->string('category', 30);
